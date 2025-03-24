@@ -40,7 +40,7 @@ jobs:
         flake8 ${{ env.SRC_DIR }} --max-doc-length=74
     - name: Check doc line lengths and complexity
       run:
-        # exit-zero treats all errors as warnings
+        # exit-zero treats all errors as warnings!
         flake8 ${{ env.SRC_DIR }} --count --exit-zero --isolated --max-complexity=10 --max-doc-length=72 --select=C901,W505 --statistics
   build_and_test:
     needs: lint
